@@ -1,10 +1,12 @@
 """Collect all screen URLs from a Mobbin app /screens page via CDP scroll.
 
 Usage:
-  python collect_screens.py <page_url> <out_json> [cdp_port]
+  python collect_screens.py <page_url> <out_json> [cdp_port] [height]
 
-Requires: websocket-client (installed). A headless Edge with --remote-debugging-port
-must already be running with the mobbinprof session profile.
+The viewport is emulated to `height` (default 16000) before navigation so the
+virtualized grid mounts many cells at once. Requires: websocket-client
+(installed). A headless Edge with --remote-debugging-port must already be
+running with the mobbinprof session profile.
 """
 import json, sys, time, urllib.request, websocket
 

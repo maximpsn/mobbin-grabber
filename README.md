@@ -1,24 +1,24 @@
 # mobbin-grabber
 
-Выгружает все скриншоты страницы `/screens` приложения с [Mobbin](https://mobbin.com) в папку на диске, по одной папке на приложение, в формате WebP.
+Downloads all screenshots of a Mobbin app `/screens` page into a folder on disk, one folder per app, as WebP.
 
-Mobbin требует авторизацию и рендерит сетку через virtualized grid — навык умеет это обходить (сессия в профиле Edge + CDP, высокий viewport для монтирования ячеек, fallback на обычный скролл и посещение каждого экрана по отдельности).
+Mobbin requires authorization and renders the grid via a virtualized grid — the skill knows how to get around it (session in an Edge profile + CDP, tall viewport to mount cells, fallback to plain scroll and to visiting each screen individually).
 
-## Структура
+## Layout
 
-- `SKILL.md` — инструкция для LLM-агента: пайплайн, нейминг, способы сбора (основной → бэкап → fallback), скачивание, грабли.
-- `scripts/collect_screens.py` — собирает URL экранов страницы через CDP (высокий viewport).
-- `scripts/download_screens.py` — качает файлы по собранным URL в папку с нумерацией и проверкой.
+- `SKILL.md` — instructions for the LLM agent: pipeline, naming, collection methods (primary → backup → fallback), download, pitfalls.
+- `scripts/collect_screens.py` — collects the page's screen URLs via CDP (tall viewport).
+- `scripts/download_screens.py` — downloads files by the collected URLs into a folder, numbered and verified.
 
 ## Naming
 
-- Папки: `G:\Main\Mobbin export\Web\<Product>` или `...\Mobile\<Product>`.
-- Файлы: `<product>-screen-<N>.webp`.
+- Folders: `G:\Main\Mobbin export\Web\<Product>` or `...\Mobile\<Product>`.
+- Files: `<product>-screen-<N>.webp`.
 
-## Требования
+## Requirements
 
-- Windows, Edge установлен.
-- Python с `websocket-client`.
-- Сессия Mobbin в профиле Edge `%LOCALAPPDATA%\Temp\gigatool\mobbinprof` (как получить — в SKILL.md).
+- Windows, Edge installed.
+- Python with `websocket-client`.
+- A Mobbin session in the Edge profile `%LOCALAPPDATA%\Temp\gigatool\mobbinprof` (how to get it — in SKILL.md).
 
-См. `SKILL.md` для полного пайплайна.
+See `SKILL.md` for the full pipeline.

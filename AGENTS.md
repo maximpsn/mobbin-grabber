@@ -1,8 +1,8 @@
 # Agent guidelines
 
-- Проверяй, что папка назначения существует; после первого скачивания помни её на всю сессию.
-- Сначала пробуй основной способ (высокий viewport). Не сошлось — переходи к способу 2, потом к способу 3. Не сдавайся: цель — полный набор файлов.
-- Бейдж «PRO / Upgrade for full access» косметический; ориентир — счётчик `Showing N screens` и что ячейки рендерятся.
-- Имена папок и файлов — строго по правилам нейминга из SKILL.md.
-- Ссылки-дубли (та же версия уже скачана) не перекачивай, сообщи и спроси.
-- После выгрузки проверь число файлов и сигнатуру WebP. Отчитайся кратко: папка, число файлов, диапазон имён.
+- Verify that the destination folder exists; after the first download, remember it for the whole session.
+- Try the primary method first (tall viewport). If it does not line up, move to method 2, then method 3. Do not give up: the goal is the full file set.
+- The «PRO / Upgrade for full access» badge is cosmetic; rely on the `Showing N screens` counter and that the cells render.
+- Folder and file names — strictly per the naming rules in SKILL.md.
+- Duplicate links (same version already downloaded) — do not re-download; tell the user and ask.
+- After downloading, verify the file count and the WebP signature. Report briefly: folder, file count, name range.
